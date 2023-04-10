@@ -1,0 +1,13 @@
+Tue 08 Mar 2022 12:13:54 AM EST
+gdf files are saved after fitting them
+
+Mon 07 Mar 2022 10:04:55 PM EST
+gdf files are the one obtained from Ryan
+
+Mon 07 Mar 2022 09:57:07 PM EST
+
+The data for the corner of the geiv detector.
+original data was stored in the ryan's home directory
+The Chn data files were changed to ascii format using the chn2dat program written by Ryan
+
+
