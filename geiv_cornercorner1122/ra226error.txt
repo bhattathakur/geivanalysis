@@ -1,0 +1,17 @@
+skipping ['co60', '347.14']
+skipping ['co60', '826.10']
+skipping ['co60', '2158.57']
+skipping ['ra226', '46.5390']
+skipping ['ra226', '53.2284']
+skipping ['ra226', '785.9600']
+skipping ['ra226', '786.3500']
+skipping ['ra226', '806.1800']
+skipping ['ra226', '1599.3700']
+skipping ['ra226', '2293.38']
+skipping ['eu152', '867.38']
+skipping ['ba133', '79.6142']
+skipping ['ba133', '80.9979']
+simulated file name:	 /home/thakur/geivanalysis/geiv_cornercorner1122/simgeiv_cornercorner1122.dat
+Warning: bi214 806.18 keV gamma-ray not found in data.
+Error: pb214 258.86 keV gamma-ray not found in simulation.
+
