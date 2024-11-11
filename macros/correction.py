@@ -11,10 +11,32 @@ from printVal      import printVal
 #remove correction.dat file if alreay exists
 #os.remove('correction.dat')
 
+
+parent = sys.argv[1]
+
 ###########################################3333
-fileloc="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/"
-f=fileloc+'simdoor-s-0.3-t-0.11-d-1.68.dat'         #sim
-geiv_data=fileloc+'datadoor-s-0.3-t-0.11-d-1.68.dat' #data
+
+position='cornercorner1122'
+dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
+#pdf_save=f'{dir_path}/geiv_{position}_data_{parent}.pdf'
+#check the file function
+def check_file(f):
+    if os.path.isfile:
+        print(f'file: {f} exists ... processing ...')
+    else:
+        print(f'file: {f} doesnot exist ... exiting  ...')
+        sys.exit(1)
+#pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
+geiv_data=f'{dir_path}/data_geiv_{position}.dat' #geiv_result from fit
+f=f'{dir_path}/sim_geiv_{position}.dat'          #sim data
+check_file(geiv_data)
+check_file(f)
+#corr_file=f'{dir_path}/correction_{parent}_geiv_{position}.dat' #save into this file
+#corr_file=fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68.dat'
+#
+#fileloc="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/"
+#f=fileloc+'simdoor-s-0.3-t-0.11-d-1.68.dat'         #sim
+#geiv_data=fileloc+'datadoor-s-0.3-t-0.11-d-1.68.dat' #data
 
 #geiv_data="/home/thakur/mylab/ryanfiles/geiv_door_data/final_door_data.dat" #door data
 #geiv_data="/home/thakur/mylab/ryanfiles/geiv_corner_data/final_corner_data.dat" #corner data
@@ -32,9 +54,9 @@ geiv_data=fileloc+'datadoor-s-0.3-t-0.11-d-1.68.dat' #data
 print("IMPORTANT..!!!\n")
 print(f"GEIV EXP DATA FILE      :{geiv_data}")
 print(f"SIMULATION DATA FILE    :{f}\n")
+#print(f"CORRECTED DATA FILE    :{corr_file}\n")
 
 
-parent = sys.argv[1]
 
 print(80*'-')
 print("ISOTOPE:\t",parent)
@@ -141,10 +163,9 @@ for d in range(len(data)):
         data.remove(data[d])
         exit(-1)
 
-corr_file=fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68.dat'
 print(20*"==")
-print(f"Correction File: {corr_file}\n")
-file = open(corr_file,'a')
+#print(f"Correction File: {corr_file}\n")
+file = open('correction.dat','a')
 for d in data:
     # Get the error on the ratio by simulation.
     A        = d[2]

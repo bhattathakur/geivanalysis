@@ -23,8 +23,36 @@ if len(sys.argv) > 1:
 print("\nWorking for correction file of "+parent+" ...\n")
 #else plot them all
 #################################################
-fileloc="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/"
-f=fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68.dat'                                    
+position='geiv_cornercorner1122'
+fileloc=f'/home/thakur/geivanalysis/{position}'
+pos=position.split('_')[1]
+f=f'{fileloc}/correction_{position}.dat' #data file to be read
+correction_save_file=f'{fileloc}/sourceCorrection_{position}.dat' #need to delete this if it is present as it is appended to save al
+#all the corrected dat files
+pdf_save_name=f'{fileloc}/correction_{parent}_{position}.pdf' #need to delete this if it is present as it is appended
+
+#check if correction data file exist
+if os.path.isfile(f):
+    print(f'file: {f} exists')
+    print('processing ....')
+    time.sleep(5)
+else:
+    print(f'file: {f} doesnot exist')
+    print('quiting ....')
+    sys.exit(1)
+    time.sleep(5)
+
+
+#check if fiel exists
+#if os.path.isfile(correction_save_file):
+#    os.remove(correction_save_file)
+#    print(f'removed file: {correction_save_file}')
+#else:
+#    print(f'{correction_save_file} doesnot exist!')
+
+plot_title=f"{position.split('_')[1]}-correction ({parent})"
+#fileloc="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/"
+#f=fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68.dat'                                    
 print("correction data file:\t",f)
 #date="feb17"
 data = []
@@ -59,7 +87,7 @@ data = numpy.array(data)
 pyplot.errorbar(data[:,1], data[:,2], yerr=[data[:,5], data[:,6]], fmt='.' )
 pyplot.xlabel('Energy/keV')
 pyplot.ylabel('Data/simulation')
-pyplot.title(parent+"(correction-door-s-0.3-t-0.11-d-1.68)")
+pyplot.title(plot_title)
 pyplot.autoscale(enable=True,axis='y')
 #pyplot.xlim(0, 2500)
 #pyplot.ylim(0.00,2.00)
@@ -82,7 +110,7 @@ pol1.SetParameters(1,0)
 #
 
 #mightneed to remove it if alreay presents
-file = open(fileloc+'sourceCorrectiondoor-s-0.3-t-0.11-d-1.68.dat', 'a')
+file = open(correction_save_file, 'a')
 if sum(ene > ethresh for ene in data[:,1]) > 1:
     # Fit and plot correction as a function of energy for all calibrations.
     print("Fit data for :"+parent)
@@ -167,9 +195,11 @@ for i,txt in enumerate(xdata):
   pyplot.annotate(str(txt),(xdata[i],ydata[i]),fontsize=5)
 
 #pyplot.figure(figsize=(12,8))
-pyplot.savefig(fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68'+parent+'.pdf', bbox_inches='tight')
-
-print("Plot are at "+fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68'+parent+'.pdf')
+#pyplot.savefig(fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68'+parent+'.pdf', bbox_inches='tight')
+pyplot.savefig(pdf_save_name, bbox_inches='tight')
+pyplot.savefig(pdf_save_name.replace('.pdf','.png'), bbox_inches='tight')
+print(f'plot saved at : {pdf_save_name}')
+#print("Plot are at "+fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68'+parent+'.pdf')
 
 #pyplot.show()
 

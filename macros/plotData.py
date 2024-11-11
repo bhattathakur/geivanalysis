@@ -6,6 +6,8 @@ import array
 from   matplotlib import pyplot
 import numpy
 import sys
+import time
+import os
 
 import ROOT
 
@@ -16,10 +18,26 @@ print("working for data for "+parent+" ...")
 #./plotData.py co60
 # Read all entries from data.dat,
 # then remove earlier superseeded entries.
-position='door'
-pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
-data_file="final_"+position+"_data.dat"
+
+position='cornercorner1122'
+dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
+pdf_save=f'{dir_path}/data_{parent}_geiv_{position}.pdf'
+data_file=f'{dir_path}/data_geiv_{position}.dat'
+#pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
+#data_file=f'{dir_path}/datageiv_{position}.dat'
+#data_file="final_"+position+"_data.dat"
 print("data file ",data_file)
+if os.path.isfile(data_file):
+    print(f'{data_file} exists!\nprocessing ....')
+    time.sleep(10)
+else:
+    print(f'{data_file} doesnot exist')
+    print('quiting...')
+    time.sleep(10)
+    sys.exit(1)
+
+
+
 data = []
 file = open(data_file, 'r')
 for line in file:
@@ -74,5 +92,8 @@ pyplot.xlim(0, 2500)
 pyplot.autoscale(axis='y')
 pyplot.title(parent+"("+position+" data)")
 
-pyplot.savefig(pdf_save+'('+position+')-data'+parent+'.pdf', bbox_inches='tight')
-print("Final data efficiency plots saved at: {}".format(pdf_save))
+
+#pyplot.savefig(pdf_save+'('+position+')-data'+parent+'.pdf', bbox_inches='tight')
+pyplot.savefig(pdf_save, bbox_inches='tight')
+pyplot.savefig(pdf_save.replace('.pdf','.png'), bbox_inches='tight')
+print("Final data efficiency plots saved as: {}".format(pdf_save))

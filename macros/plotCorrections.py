@@ -10,8 +10,12 @@ import ROOT
 
 ethresh = 60 # keV
 ###############################################33
-fileloc="/home/thakur/mylab/ryanfiles/multisimulation/0.7-40.2-ra/"
-f=fileloc+'sourceCorrection0.7-40.2-ra.dat'
+fileloc="/home/thakur/geivanalysis/geiv_cornercorner1122"
+file_name="sourceCorrection_geiv_cornercorner1122.dat"
+source_position="cornercorner1122"
+f=f'{fileloc}/{file_name}'
+pdf_name=f'{fileloc}/source_correction_{source_position}.pdf'
+pdf_name1=f'{fileloc}/correction_correlated_{source_position}.pdf'
 print("Source correction data file:\t",f)
 
 #check if file exists
@@ -92,7 +96,7 @@ pyplot.xlim(xs[0]-0.5, xs[-1]+0.5)
 pyplot.xticks(xs, parents)
 #pyplot.ylim(0.0, 1.2)
 pyplot.autoscale(enable=True,axis='y')
-pyplot.title("correction-0.7-40.2-ra")
+pyplot.title(f"correction {source_position}")
 
 pol0  = ROOT.TF1('pol0','[0]',      xs[0]-0.5, xs[-1]+0.5)
 pol0.SetParameter(0,1)
@@ -116,8 +120,8 @@ for x in xs:
     ys.append( pol0.Eval(x) )
 pyplot.plot(xs, ys)
 
-pyplot.savefig(fileloc+'correction-0.7-40.2-ra.pdf', bbox_inches='tight')
-print("\n"+fileloc+'correction-0.7-40.2-ra.pdf created')
+pyplot.savefig(pdf_name, bbox_inches='tight')
+print(f'{pdf_name} created!')
 pyplot.clf()
 
 xs = numpy.arange(0, len(parents))
@@ -128,7 +132,7 @@ pyplot.xlim(xs[0]-0.5, xs[-1]+0.5)
 pyplot.xticks(xs, parents)
 #pyplot.ylim(0.0, 1.2) #ylim(bottom,top)
 pyplot.autoscale(enable=True,axis='y')
-pyplot.title("correction-correlated-0.7-40.2-ra")
+pyplot.title(f"correction-correlated-{source_position}")
 
 graph = ROOT.TGraphAsymmErrors( len(x),
                                 array.array('d',x),
@@ -144,6 +148,6 @@ for x in xs:
     ys.append( pol0.Eval(x) )
 pyplot.plot(xs, ys)
 
-pyplot.savefig(fileloc+'correctioncorrelated-0.7-40.2-ra.pdf', bbox_inches='tight')
-print("\n"+fileloc+'correctioncorrelated-0.7-40.2-ra.pdf created')
+pyplot.savefig(pdf_name1, bbox_inches='tight')
+print(f"\n{pdf_name1} created")
 

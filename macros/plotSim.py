@@ -8,6 +8,8 @@ import array
 from   matplotlib import pyplot
 import numpy
 import sys
+import os
+import time
 
 import ROOT
 
@@ -19,11 +21,32 @@ print("\nWorking on simulation data for "+parent+" ...")
 # Read all entries from data.dat,
 # then remove earlier superseeded entries.
 
+position='cornercorner1122'
+data_type='sim'
+plot_title=f'{parent}({position} {data_type})'
+dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
+saveplot=f'{dir_path}/{data_type}_{parent}_geiv_{position}.pdf'
+f=f'{dir_path}/{data_type}_geiv_{position}.dat'
+#pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
+#f=f'{dir_path}/simgeiv_{position}.dat'
+#data_file="final_"+position+"_data.dat"
+print("data file ",f)
+if os.path.isfile(f):
+   print(f'{f} exists!\nprocessing ....')
+   time.sleep(5)
+else:
+   print(f'{f} doesnot exist')
+   print('quiting...')
+   time.sleep(5)
+   sys.exit(1)
+
+
+
 data = []
 #########################################################
-saveplot="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/" #root for the simulation data and plots
-dataroot='simdoor-s-0.3-t-0.11-d-1.68'
-f=saveplot+dataroot+'.dat'
+#saveplot="/home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/" #root for the simulation data and plots
+#dataroot='simdoor-s-0.3-t-0.11-d-1.68'
+#f=saveplot+dataroot+'.dat'
 
 print("Plot save location:\t",saveplot)
 print("Sim  data file:    \t",f)
@@ -77,7 +100,11 @@ pyplot.ylabel('Efficiency/%')
 pyplot.autoscale(enable=True)
 #pyplot.xlim(0, 2500)
 #pyplot.ylim(-2, 5)
-pyplot.title(dataroot+parent)
+pyplot.title(plot_title)
 
-pyplot.savefig(saveplot+dataroot+parent+'.pdf', bbox_inches='tight')
-print("\nPlot saved: "+saveplot+dataroot+parent+'.pdf')
+pyplot.savefig(saveplot, bbox_inches='tight')
+pyplot.savefig(saveplot.replace('.pdf','.png'), bbox_inches='tight')
+print(f"Plot saved as {saveplot}")
+
+#pyplot.savefig(saveplot+dataroot+parent+'.pdf', bbox_inches='tight')
+#print("\nPlot saved: "+saveplot+dataroot+parent+'.pdf')

@@ -18,7 +18,7 @@ parent   = sys.argv[1]
 macFile  = sys.argv[2]
 gdfFile  = sys.argv[3] #gdf file for fitting the simulated data
 gdfFile0 = sys.argv[4] #original gdf file
-no_of_files=20
+no_of_files=10
 
 print("parent:\t",parent)
 print("macFile:\t",macFile)
@@ -37,6 +37,7 @@ for line in file:
         print("Number of simulation files: {}\n".format(no_of_files))
         N=no_of_files*N
         print("N in a simulation: {}\n".format(N))
+        print(f"\nor N: {N/1e6} M")
 
 isotopes = [[ parent, 1 ]]
 if   parent == 'eu152' or parent == 'Eu152' or parent == 'Eu-152':
