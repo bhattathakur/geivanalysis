@@ -123,7 +123,7 @@ timestamp color 1
 timestamp rot 0
 timestamp font 0
 timestamp char size 1.000000
-timestamp def "Sun Nov 10 21:08:39 2024"
+timestamp def "Mon Nov 11 23:08:48 2024"
 r0 off
 link r0 to g0
 r0 type above
@@ -170,7 +170,7 @@ g0 fixedpoint xy 0.000000, 0.000000
 g0 fixedpoint format general general
 g0 fixedpoint prec 6, 6
 with g0
-    world 29.97355, 0, 3199.58079, 2000
+    world -0.36132, 0, 3200.6066, 2000
     stack world 0, 0, 0, 0
     znorm 1
     view 0.083333, 0.115530, 1.888258, 0.928030
