@@ -7,6 +7,7 @@ desintation_folder='/home/thakur/lccfiles/cornercorner1122_25M/'
 position='cornercorner'
 sim_value='25M'
 label_format=f'{position}_{sim_value}'
+run_command=True
 
 print(f'label_format: {label_format}')
 
@@ -28,7 +29,20 @@ print(f'isotopes: {isotopes}')
 #gdf files associates with isotpes
 
 all_files=os.listdir('.')
+print(f'all_files: {all_files}')
 gdf_files=[i for i in all_files if i.endswith('.gdf') and any(j in i for j in isotopes)]
+bgrate_data_files=[i for i in all_files if i.endswith('.dat') and 'bgrates' in i and any(j in i for j in isotopes)]
+
+print()
+
+print(f'bgrate_data_files: {bgrate_data_files}')
+
+for f in bgrate_data_files:
+    new_file_path=os.path.join(desintation_folder,f)
+    copy_command=f'cp -v {f} {new_file_path}' 
+    print(f'Debug: copy_command: {copy_command}')
+    if run_command:os.system(copy_command)
+
 
 for gf in gdf_files:
     gf_parts=gf.split('.')
@@ -38,8 +52,8 @@ for gf in gdf_files:
     #print(f'new_gf_name: {new_gf_name}')
     new_file_path=os.path.join(desintation_folder,new_gf_name)
     copy_gdf_command=f'cp -v {gf} {new_file_path}' 
-    #print(f'Debug: copy_gdf_command: {copy_gdf_command}')
-    os.system(copy_gdf_command)
+    print(f'Debug: copy_gdf_command: {copy_gdf_command}')
+    if run_command:os.system(copy_gdf_command)
     #print(f'new_file_path: {new_file_path}')
 
 
