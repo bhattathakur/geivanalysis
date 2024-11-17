@@ -5,26 +5,35 @@ from   matplotlib import pyplot
 import numpy
 import sys
 import os
+import time
 
 import ROOT
 
 ethresh = 60 # keV
-###############################################33
+###############################################
+total_simulations='25M'
 fileloc="/home/thakur/geivanalysis/geiv_cornercorner1122"
-file_name="sourceCorrection_geiv_cornercorner1122.dat"
+file_name=f"source_correction_cornercorner1122_{total_simulations}.dat"
 source_position="cornercorner1122"
 f=f'{fileloc}/{file_name}'
-pdf_name=f'{fileloc}/source_correction_{source_position}.pdf'
-pdf_name1=f'{fileloc}/correction_correlated_{source_position}.pdf'
+pdf_name=f'{fileloc}/source_correction_{source_position}_{total_simulations}.pdf'
+pdf_name1=f'{fileloc}/correction_correlated_{source_position}_{total_simulations}.pdf'
+
 print("Source correction data file:\t",f)
 
 #check if file exists
 if os.path.exists(f):
     print("file exists: ",f)
+    print('processing...!\n')
+    time.sleep(5)
+    
     #os.remove(f)
     #print("file removed: ",f)
 else:
     print("file doesnot exist: ",f)
+    print('quiting..\n')
+    time.sleep(5)
+    sys.exit(1)
 
 #print("file:\t",f)
 
@@ -121,6 +130,7 @@ for x in xs:
 pyplot.plot(xs, ys)
 
 pyplot.savefig(pdf_name, bbox_inches='tight')
+pyplot.savefig(pdf_name.replace('.pdf','.png'), bbox_inches='tight')
 print(f'{pdf_name} created!')
 pyplot.clf()
 
@@ -149,5 +159,6 @@ for x in xs:
 pyplot.plot(xs, ys)
 
 pyplot.savefig(pdf_name1, bbox_inches='tight')
+pyplot.savefig(pdf_name1.replace('.pdf','.png'), bbox_inches='tight')
 print(f"\n{pdf_name1} created")
 

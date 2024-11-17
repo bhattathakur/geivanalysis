@@ -24,21 +24,25 @@ print("\nWorking for correction file of "+parent+" ...\n")
 #else plot them all
 #################################################
 position='geiv_cornercorner1122'
+total_simulations='25M'
 fileloc=f'/home/thakur/geivanalysis/{position}'
 pos=position.split('_')[1]
-f=f'{fileloc}/correction_{position}.dat' #data file to be read
-correction_save_file=f'{fileloc}/sourceCorrection_{position}.dat' #need to delete this if it is present as it is appended to save al
+
+#correction_geiv_cornercorner1122_25M.dat
+f=f'{fileloc}/correction_{position}_{total_simulations}.dat' #data file to be read
+
+#correction_save_file=f'{fileloc}/sourceCorrection_{position}.dat' #need to delete this if it is present as it is appended to save al
 #all the corrected dat files
-pdf_save_name=f'{fileloc}/correction_{parent}_{position}.pdf' #need to delete this if it is present as it is appended
+pdf_save_name=f'{fileloc}/correction_{parent}_{position}_{total_simulations}.pdf' #need to delete this if it is present as it is appended
 
 #check if correction data file exist
 if os.path.isfile(f):
     print(f'file: {f} exists')
-    print('processing ....')
+    print('processing ....\n')
     time.sleep(5)
 else:
     print(f'file: {f} doesnot exist')
-    print('quiting ....')
+    print('quiting ....\n')
     sys.exit(1)
     time.sleep(5)
 
@@ -110,7 +114,7 @@ pol1.SetParameters(1,0)
 #
 
 #mightneed to remove it if alreay presents
-file = open(correction_save_file, 'a')
+file = open('source_correction.dat', 'a')
 if sum(ene > ethresh for ene in data[:,1]) > 1:
     # Fit and plot correction as a function of energy for all calibrations.
     print("Fit data for :"+parent)

@@ -22,21 +22,23 @@ print("\nWorking on simulation data for "+parent+" ...")
 # then remove earlier superseeded entries.
 
 position='cornercorner1122'
+number_of_simulations='25M'
 data_type='sim'
 plot_title=f'{parent}({position} {data_type})'
 dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
 saveplot=f'{dir_path}/{data_type}_{parent}_geiv_{position}.pdf'
-f=f'{dir_path}/{data_type}_geiv_{position}.dat'
+
+f=f'{dir_path}/{data_type}_geiv_{position}_{number_of_simulations}.dat' #sim_data
 #pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
 #f=f'{dir_path}/simgeiv_{position}.dat'
 #data_file="final_"+position+"_data.dat"
 print("data file ",f)
 if os.path.isfile(f):
-   print(f'{f} exists!\nprocessing ....')
+   print(f'{f} exists!\nprocessing ....\n')
    time.sleep(5)
 else:
    print(f'{f} doesnot exist')
-   print('quiting...')
+   print('quiting...\n')
    time.sleep(5)
    sys.exit(1)
 

@@ -18,7 +18,8 @@ parent   = sys.argv[1]
 macFile  = sys.argv[2]
 gdfFile  = sys.argv[3] #gdf file for fitting the simulated data
 gdfFile0 = sys.argv[4] #original gdf file
-no_of_files=10
+
+no_of_files=25
 
 print("parent:\t",parent)
 print("macFile:\t",macFile)
@@ -32,12 +33,12 @@ for line in file:
     # This should find the last line that begins with (not commented out) beamOn.
     if re.search('^/run/beamOn', line):
         N = int( line.split()[1] )
-        print("N in a mac file:   {}\n".format(N))
+        print("N in a mac file:   {}".format(N))
         #changing N for given files
-        print("Number of simulation files: {}\n".format(no_of_files))
+        print("Number of simulation files: {}".format(no_of_files))
         N=no_of_files*N
-        print("N in a simulation: {}\n".format(N))
-        print(f"\nor N: {N/1e6} M")
+        print("N in a simulation: {}".format(N))
+        print(f"or N: {N/1e6} M\n")
 
 isotopes = [[ parent, 1 ]]
 if   parent == 'eu152' or parent == 'Eu152' or parent == 'Eu-152':

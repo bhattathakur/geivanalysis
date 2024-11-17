@@ -1,10 +1,21 @@
 #!/bin/bash
-#rm -vrf /home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/sourceCorrectiondoor-s-0.3-t-0.11-d-1.68.dat
-#rm -rvf /home/thakur/geivanalysis/geiv_cornercorner1122/sourceCorrection_geiv_cornercorner1122.dat
+
+dest_path=/home/thakur/geivanalysis/geiv_cornercorner1122/
+
+source='cornercorner1122'
+total_simulations='25M'
+dest_file=source_correction_${source}_${total_simulations}.dat
+
+dest_arg=${dest_path}${dest_file}
+
+echo 'saving into: '${dest_arg}
+
 
 python3 plotCorrection.py am241
 python3 plotCorrection.py pb210
 python3 plotCorrection.py ra226
+
+mv -v source_correction.dat ${dest_arg}
 
 #python3 plotCorrection.py ba133
 #python3 plotCorrection.py co60

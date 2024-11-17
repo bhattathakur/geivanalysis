@@ -20,20 +20,21 @@ print("working for data for "+parent+" ...")
 # then remove earlier superseeded entries.
 
 position='cornercorner1122'
+total_simulations='25M'
 dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
-pdf_save=f'{dir_path}/data_{parent}_geiv_{position}.pdf'
-data_file=f'{dir_path}/data_geiv_{position}.dat'
+pdf_save=f'{dir_path}/data_{parent}_geiv_{position}_{total_simulations}.pdf'
+data_file=f'{dir_path}/data_geiv_{position}_{total_simulations}.dat'
 #pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
 #data_file=f'{dir_path}/datageiv_{position}.dat'
 #data_file="final_"+position+"_data.dat"
 print("data file ",data_file)
 if os.path.isfile(data_file):
-    print(f'{data_file} exists!\nprocessing ....')
-    time.sleep(10)
+    print(f'{data_file} exists!\nprocessing ....\n')
+    time.sleep(5)
 else:
     print(f'{data_file} doesnot exist')
-    print('quiting...')
-    time.sleep(10)
+    print('quiting...\n')
+    time.sleep(5)
     sys.exit(1)
 
 
@@ -96,4 +97,4 @@ pyplot.title(parent+"("+position+" data)")
 #pyplot.savefig(pdf_save+'('+position+')-data'+parent+'.pdf', bbox_inches='tight')
 pyplot.savefig(pdf_save, bbox_inches='tight')
 pyplot.savefig(pdf_save.replace('.pdf','.png'), bbox_inches='tight')
-print("Final data efficiency plots saved as: {}".format(pdf_save))
+print("\nFinal data efficiency plots saved as: {}".format(pdf_save))

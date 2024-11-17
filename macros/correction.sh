@@ -4,9 +4,10 @@ rm -rf correction.dat
 
 dir_path="/home/thakur/geivanalysis/geiv_cornercorner1122"
 position="cornercorner1122"
-correction_file="${dir_path}/correction_geiv_${position}.dat" #save into this file
+total_simulations='25M'
+correction_file="${dir_path}/correction_geiv_${position}_${total_simulations}.dat" #save into this file
 
-echo "correction_file: ${correction_file}"
+echo "correction_file: ${correction_file}\n"
 
 #rm -rf /home/thakur/mylab/ryanfiles/multisimulation/door-s-0.3-t-0.11-d-1.68/correctiondoor-s-0.3-t-0.11-d-1.68.dat
 #echo "cor_file: $cor_file"
@@ -23,7 +24,8 @@ echo "correction_file: ${correction_file}"
 ./correction.py pb210
 ./correction.py ra226
 
-mv correction.dat ${correction_file} 
+mv -v correction.dat ${correction_file} 
+ls -lt ${correction_file} 
 
 #./correction.py ba133
 #./correction.py co60

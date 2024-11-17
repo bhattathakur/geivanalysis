@@ -4,6 +4,7 @@
 rm -f data.dat #need to delete if it is present
 
 data_dir=geiv_cornercorner1122    #data dir
+number_of_simulations=25M
 dest_folder=geiv_cornercorner1122 #destination dir
 
 add1="/home/thakur/geivanalysis/${data_dir}"
@@ -18,6 +19,12 @@ isotopes=("am241" "pb210" "ra226")
 for isotope in ${isotopes[@]}
 do
   echo "working with ${isotope}"
+  echo "modified time of a fie:"
+  ls -lt $add1/${isotope}.dat
+  ls -lt $add1/${isotope}.gdf
+  sleep 5
+  echo 
+
   arg="${isotope} $add1/${isotope}.dat $add1/${isotope}.gdf $add/nugdf/${isotope}.gdf"
   echo arg: ${arg}
  #run data.py
@@ -25,7 +32,7 @@ do
  #./data.py ${isotope} $add1/${isotope}.dat $add1/${isotope}.gdf $add/nugdf/${isotope}.gdf #if we want to save to individual file
 done
  #moving result (data.py)
- save_file="${add1}/data_$data_dir.dat"
+ save_file="${add1}/data_${data_dir}_${number_of_simulations}.dat"
  echo "saving as: ${save_file}"
  mv data.dat  ${save_file}
 

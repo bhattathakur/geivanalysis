@@ -17,20 +17,25 @@ parent = sys.argv[1]
 ###########################################3333
 
 position='cornercorner1122'
+total_simulations='25M'
 dir_path=f'/home/thakur/geivanalysis/geiv_cornercorner1122'
 #pdf_save=f'{dir_path}/geiv_{position}_data_{parent}.pdf'
 #check the file function
 def check_file(f):
     if os.path.isfile:
-        print(f'file: {f} exists ... processing ...')
+        print(f'file: {f} exists ... processing ...\n')
     else:
-        print(f'file: {f} doesnot exist ... exiting  ...')
+        print(f'file: {f} doesnot exist ... exiting  ...\n')
         sys.exit(1)
 #pdf_save='/home/thakur/mylab/ryanfiles/geiv_'+position+'_data/'
-geiv_data=f'{dir_path}/data_geiv_{position}.dat' #geiv_result from fit
-f=f'{dir_path}/sim_geiv_{position}.dat'          #sim data
+#data_geiv_cornercorner1122_25M.dat
+geiv_data=f'{dir_path}/data_geiv_{position}_{total_simulations}.dat' #geiv_result from fit
+f=f'{dir_path}/sim_geiv_{position}_{total_simulations}.dat'          #sim data
+
+#check if file exists
 check_file(geiv_data)
 check_file(f)
+
 #corr_file=f'{dir_path}/correction_{parent}_geiv_{position}.dat' #save into this file
 #corr_file=fileloc+'correctiondoor-s-0.3-t-0.11-d-1.68.dat'
 #
