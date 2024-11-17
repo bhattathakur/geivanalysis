@@ -1,0 +1,635 @@
+Job 3626080 running on SLURM NODELIST: skylake043 
+Sun Nov 17 15:01:00 EST 2024
+
+**************************************************************
+ Geant4 version Name: geant4-10-06    (6-December-2019)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Vacuum H 1e-25 2.73 1.87245e-14
+ fMaterial:Vacuum with formula: H added! 
+     Nb of fMaterial = 1
+     Nb of fIsotope =  0
+     Nb of fElement =  1
+Air N0.78-O0.22 0.00129 273.15 6.32421e+08
+ fMaterial:Air with formula: N0.78-O0.22 added! 
+     Nb of fMaterial = 2
+     Nb of fIsotope =  0
+     Nb of fElement =  3
+Aluminium Al 2.7 273.15 6.32421e+08
+ fMaterial:Aluminium with formula: Al added! 
+     Nb of fMaterial = 3
+     Nb of fIsotope =  0
+     Nb of fElement =  4
+Silicon Si 2.329 273.15 6.32421e+08
+ fMaterial:Silicon with formula: Si added! 
+     Nb of fMaterial = 4
+     Nb of fIsotope =  0
+     Nb of fElement =  5
+Lead Pb 11.3 273.15 6.32421e+08
+ fMaterial:Lead with formula: Pb added! 
+     Nb of fMaterial = 5
+     Nb of fIsotope =  0
+     Nb of fElement =  6
+Germanium Ge 5.323 273.15 6.32421e+08
+ fMaterial:Germanium with formula: Ge added! 
+     Nb of fMaterial = 6
+     Nb of fIsotope =  0
+     Nb of fElement =  7
+Copper Cu 8.96 273.15 6.32421e+08
+ fMaterial:Copper with formula: Cu added! 
+     Nb of fMaterial = 7
+     Nb of fIsotope =  0
+     Nb of fElement =  8
+Aluminum Al 2.7 273.15 6.32421e+08
+ fMaterial:Aluminum with formula: Al added! 
+     Nb of fMaterial = 8
+     Nb of fIsotope =  0
+     Nb of fElement =  8
+Polyethylene C1-H2 0.93 273.15 6.32421e+08
+ fMaterial:Polyethylene with formula: C1-H2 added! 
+     Nb of fMaterial = 9
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+Polypropylene C1-H2 0.855 273.15 6.32421e+08
+ fMaterial:Polypropylene with formula: C1-H2 added! 
+     Nb of fMaterial = 10
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+CarbonFiber C 0.33 273.15 6.32421e+08
+ fMaterial:CarbonFiber with formula: C added! 
+     Nb of fMaterial = 11
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+CarbonFiber_M17.2_1x2 C 0.329731 273.15 6.32421e+08
+ fMaterial:CarbonFiber_M17.2_1x2 with formula: C added! 
+     Nb of fMaterial = 12
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+CarbonFiber_M17.2_3 C 0.462829 273.15 6.32421e+08
+ fMaterial:CarbonFiber_M17.2_3 with formula: C added! 
+     Nb of fMaterial = 13
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+CarbonFiber_M17.2_4 C 0.567113 273.15 6.32421e+08
+ fMaterial:CarbonFiber_M17.2_4 with formula: C added! 
+     Nb of fMaterial = 14
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+CarbonFiber_M17.2_5 C 0.527175 273.15 6.32421e+08
+ fMaterial:CarbonFiber_M17.2_5 with formula: C added! 
+     Nb of fMaterial = 15
+     Nb of fIsotope =  0
+     Nb of fElement =  9
+SS304L C18-Si600-Mn1910-Cr18230-Mo52-Cu490-Po30-S29-N87-Ni8160-Co100-Fe69826 8 273.15 6.32421e+08
+ fMaterial:SS304L with formula: C18-Si600-Mn1910-Cr18230-Mo52-Cu490-Po30-S29-N87-Ni8160-Co100-Fe69826 added! 
+     Nb of fMaterial = 16
+     Nb of fIsotope =  0
+     Nb of fElement =  17
+SS316L C30-Mn2000-P45-S30-Si1000-Cr17000-Ni12000-Mo2500-Fe65395 8 273.15 6.32421e+08
+ fMaterial:SS316L with formula: C30-Mn2000-P45-S30-Si1000-Cr17000-Ni12000-Mo2500-Fe65395 added! 
+     Nb of fMaterial = 17
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+VespelSp1 C22-H10-O5-N2 1.43 273.15 6.32421e+08
+ fMaterial:VespelSp1 with formula: C22-H10-O5-N2 added! 
+     Nb of fMaterial = 18
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+Resin C39-H26-O8 1.17 273.15 6.32421e+08
+ fMaterial:Resin with formula: C39-H26-O8 added! 
+     Nb of fMaterial = 19
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+Acrylic C5-H8-O2 1.18 273.15 6.32421e+08
+ fMaterial:Acrylic with formula: C5-H8-O2 added! 
+     Nb of fMaterial = 20
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+LiquidScintillator C111-H218 0.78 273.15 6.32421e+08
+ fMaterial:LiquidScintillator with formula: C111-H218 added! 
+     Nb of fMaterial = 21
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+Water H2-O1 1 273.15 6.32421e+08
+ fMaterial:Water with formula: H2-O1 added! 
+     Nb of fMaterial = 22
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+NitricAcid H2018-O1054-N18 1 273.15 6.32421e+08
+ fMaterial:NitricAcid with formula: H2018-O1054-N18 added! 
+     Nb of fMaterial = 23
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+NitricAcidLowConc H1115-O565-N3 1 273.15 6.32421e+08
+ fMaterial:NitricAcidLowConc with formula: H1115-O565-N3 added! 
+     Nb of fMaterial = 24
+     Nb of fIsotope =  0
+     Nb of fElement =  18
+AluminaTeflon F3080-C1540-O572-H556-Al196 0.763 273.15 6.32421e+08
+ fMaterial:AluminaTeflon with formula: F3080-C1540-O572-H556-Al196 added! 
+     Nb of fMaterial = 25
+     Nb of fIsotope =  0
+     Nb of fElement =  19
+XLPE C1-H2 0.0320369 273.15 6.32421e+08
+ fMaterial:XLPE with formula: C1-H2 added! 
+     Nb of fMaterial = 26
+     Nb of fIsotope =  0
+     Nb of fElement =  19
+polyethylene_film C2-H4 0.9688 273.15 6.32421e+08
+ fMaterial:polyethylene_film with formula: C2-H4 added! 
+     Nb of fMaterial = 27
+     Nb of fIsotope =  0
+     Nb of fElement =  19
+kovar Fe5900-Bi1624-Co952 8.35 273.15 6.32421e+08
+ fMaterial:kovar with formula: Fe5900-Bi1624-Co952 added! 
+     Nb of fMaterial = 28
+     Nb of fIsotope =  0
+     Nb of fElement =  20
+HCl H11511-O5556-Cl40 1.07043 273.15 6.32421e+08
+ fMaterial:HCl with formula: H11511-O5556-Cl40 added! 
+     Nb of fMaterial = 29
+     Nb of fIsotope =  0
+     Nb of fElement =  21
+KOH K39-O723-H1408 1.13353 273.15 6.32421e+08
+ fMaterial:KOH with formula: K39-O723-H1408 added! 
+     Nb of fMaterial = 30
+     Nb of fIsotope =  0
+     Nb of fElement =  22
+Concrete Al60-Ca101-Fe26-K17-Mg12-Mn4-Na23-Si277-O480 2.32 273.15 6.32421e+08
+ fMaterial:Concrete with formula: Al60-Ca101-Fe26-K17-Mg12-Mn4-Na23-Si277-O480 added! 
+     Nb of fMaterial = 31
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Resin_M16.1 C10-H12 1.026 273.15 6.32421e+08
+ fMaterial:Resin_M16.1 with formula: C10-H12 added! 
+     Nb of fMaterial = 32
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Resin_M16.2 C10-H12 0.987 273.15 6.32421e+08
+ fMaterial:Resin_M16.2 with formula: C10-H12 added! 
+     Nb of fMaterial = 33
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Resin_M16.3 C31-H38-O13 1.196 273.15 6.32421e+08
+ fMaterial:Resin_M16.3 with formula: C31-H38-O13 added! 
+     Nb of fMaterial = 34
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_1 Na1-Cl1 1.156 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_1 with formula: Na1-Cl1 added! 
+     Nb of fMaterial = 35
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_2 Na1-Cl1 1.644 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_2 with formula: Na1-Cl1 added! 
+     Nb of fMaterial = 36
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_3 Na1-Cl1 1.259 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_3 with formula: Na1-Cl1 added! 
+     Nb of fMaterial = 37
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_4 Na1-Cl1 1.244 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_4 with formula: Na1-Cl1 added! 
+     Nb of fMaterial = 38
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_5 C 0.5467 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_5 with formula: C added! 
+     Nb of fMaterial = 39
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt_5_Detailed C 2 273.15 6.32421e+08
+ fMaterial:Wipp_Salt_5_Detailed with formula: C added! 
+     Nb of fMaterial = 40
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Wipp_Salt Na1-Cl1 2.16 273.15 6.32421e+08
+ fMaterial:Wipp_Salt with formula: Na1-Cl1 added! 
+     Nb of fMaterial = 41
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+LL134_SiWafer Si 1.54754 273.15 6.32421e+08
+ fMaterial:LL134_SiWafer with formula: Si added! 
+     Nb of fMaterial = 42
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+R-028 Cu91-C365-H730 0.96 273.15 6.32421e+08
+ fMaterial:R-028 with formula: Cu91-C365-H730 added! 
+     Nb of fMaterial = 43
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+R-029 Cu30-C104-H208 0.602 273.15 6.32421e+08
+ fMaterial:R-029 with formula: Cu30-C104-H208 added! 
+     Nb of fMaterial = 44
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Teflon C1-F2 2.2 273.15 6.32421e+08
+ fMaterial:Teflon with formula: C1-F2 added! 
+     Nb of fMaterial = 45
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+Silica Si1-O2 1.31 273.15 6.32421e+08
+ fMaterial:Silica with formula: Si1-O2 added! 
+     Nb of fMaterial = 46
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+LooseSilica Si1-O2 1 273.15 6.32421e+08
+ fMaterial:LooseSilica with formula: Si1-O2 added! 
+     Nb of fMaterial = 47
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+MgF2 Mg1-F2 1.67 273.15 6.32421e+08
+ fMaterial:MgF2 with formula: Mg1-F2 added! 
+     Nb of fMaterial = 48
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+AlPellets Al 1.54026 273.15 6.32421e+08
+ fMaterial:AlPellets with formula: Al added! 
+     Nb of fMaterial = 49
+     Nb of fIsotope =  0
+     Nb of fElement =  25
+GXe Xe 0.30472 273.15 6.32421e+08
+ fMaterial:GXe with formula: Xe added! 
+     Nb of fMaterial = 50
+     Nb of fIsotope =  0
+     Nb of fElement =  26
+Rhyolite Si1333_O3107_Al294_Fe54 2.385 273.15 6.32421e+08
+ fMaterial:Rhyolite with formula: Si1333_O3107_Al294_Fe54 added! 
+     Nb of fMaterial = 51
+     Nb of fIsotope =  0
+     Nb of fElement =  26
+PTFE C2F4 2.2 273.15 6.32421e+08
+ fMaterial:PTFE with formula: C2F4 added! 
+     Nb of fMaterial = 52
+     Nb of fIsotope =  0
+     Nb of fElement =  26
+Titanium Ti 4.43 273.15 6.32421e+08
+ fMaterial:Titanium with formula: Ti added! 
+     Nb of fMaterial = 53
+     Nb of fIsotope =  0
+     Nb of fElement =  27
+Tin Sn 0.9187 273.15 6.32421e+08
+ fMaterial:Tin with formula: Sn added! 
+     Nb of fMaterial = 54
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+CCD Fe 1.124 273.15 6.32421e+08
+ fMaterial:CCD with formula: Fe added! 
+     Nb of fMaterial = 55
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+Lens_Glass Si 2.067 273.15 6.32421e+08
+ fMaterial:Lens_Glass with formula: Si added! 
+     Nb of fMaterial = 56
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+Bare_Glass Si2_O2 2.48 273.15 6.32421e+08
+ fMaterial:Bare_Glass with formula: Si2_O2 added! 
+     Nb of fMaterial = 57
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+IAEA_Powder Si 0.965 273.15 6.32421e+08
+ fMaterial:IAEA_Powder with formula: Si added! 
+     Nb of fMaterial = 58
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+Rubber C5_H8 1.259 273.15 6.32421e+08
+ fMaterial:Rubber with formula: C5_H8 added! 
+     Nb of fMaterial = 59
+     Nb of fIsotope =  0
+     Nb of fElement =  28
+Radon Rn 0.00973 273.15 6.32421e+08
+ fMaterial:Radon with formula: Rn added! 
+     Nb of fMaterial = 60
+     Nb of fIsotope =  0
+     Nb of fElement =  29
+Dust Si105_O409_Al22_Fe9_Ca14_Mg5_S3_C15 0.6955 273.15 6.32421e+08
+ fMaterial:Dust with formula: Si105_O409_Al22_Fe9_Ca14_Mg5_S3_C15 added! 
+     Nb of fMaterial = 61
+     Nb of fIsotope =  0
+     Nb of fElement =  29
+AluminiumOxide Al2_O3 0.716 273.15 6.32421e+08
+ fMaterial:AluminiumOxide with formula: Al2_O3 added! 
+     Nb of fMaterial = 62
+     Nb of fIsotope =  0
+     Nb of fElement =  29
+WaterAluminiumOxide H674_O1961_C12134_Al42504_Si102046 1.01 273.15 6.32421e+08
+ fMaterial:WaterAluminiumOxide with formula: H674_O1961_C12134_Al42504_Si102046 added! 
+     Nb of fMaterial = 63
+     Nb of fIsotope =  0
+     Nb of fElement =  29
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+Energy resolution from Ra-226 door calibration of February 14, 2020.
+AnalysisManager: Energy Smearing for Detector: GeIV
+Constructing Ge-IV detector.
+World radius...: 2647.58 mm
+World x........: 3000 mm
+World y........: 3000 mm
+World z........: 3168.4 mm
+fInnerShieldThickness........: 2 inch
+fInnerCavity x........: 20 inch
+fInnerCavity y........: 12 inch
+fInnerCavity z........: 12 inch
+fEndCapEntranceWindowThickness........: 1.5 mm
+Location of detector end cap face, relative to inner shielding center: -8.358
+fDetectorEnclosureLength: 226
+Setting side dead layer thickness to correct solid angle of February 2020 door efficiency calibration.
+................................................
+fDeadLayerSideThickness: 0.1 mm
+fDetectorRadius:         40.2 mm
+................................................
+fDeadLayerTopThickness:  0.11 mm
+................................................
+Warning::Detector face dead layer thickness not yet tuned.
+Checking overlaps for volume OuterShield (G4SubtractionSolid) ... OK! 
+Volume Info of OuterShield
+OuterShield.........: 7582751.138639 g, 671039.923773 cm^3, 11.300000g/cm^3. (11.300000 g/cm^3 as defined in its G4Material entry)
+Checking overlaps for volume InnerShield (G4SubtractionSolid) ... OK! 
+Information of InnerShield
+InnerShield.........: 901753.269928 g, 100642.106019 cm^3, 8.960000g/cm^3. (8.960000 g/cm^3 as defined in its G4Material entry)
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+Checking overlaps for volume InnerCavity (G4Box) ... OK! 
+fLogicalInnerCavity information----->
+InnerCavity.........: 60.881220 g, 47194.744320 cm^3, 0.001290g/cm^3. (0.001290 g/cm^3 as defined in its G4Material entry)
+Checking overlaps for volume DetectorEnclosure (G4Tubs) ... OK! 
+Checking overlaps for volume Head (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume Snout (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume Neck (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume NeckCavity (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume NeckInCopper (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume NeckCavityInCopper (G4Tubs) ... OK! 
+Checking overlaps for volume NeckInLead (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume NeckCavityInLead (G4Tubs) ... OK! 
+Checking overlaps for volume ColdFinger (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume ColdFingerCavity (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume ColdFingerInCopper (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume ColdFingerCavityInCopper (G4Tubs) ... OK! 
+Checking overlaps for volume ColdFingerInLead (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume ColdFingerCavityInLead (G4Tubs) ... OK! 
+Checking overlaps for volume EndCap (G4SubtractionSolid) ... OK! 
+...............................
+EndCap Center location: 0.000000 0.000000 33.500000 mm 
+Detector Enclosure Center: -121.358000 0.000000 0.000000 mm 
+Detector Enclosure HalfZ : 113.000000 mm 
+Detector Enclosure Radius: 47.650000 mm 
+Checking overlaps for volume Holder (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume Sheath (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume Detector (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume ActiveDetector (G4IntersectionSolid) ... OK! 
+Checking overlaps for volume SignalPin (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume SignalPinSupport (G4SubtractionSolid) ... OK! 
+Checking overlaps for volume PlasticMount (G4SubtractionSolid) ... OK! 
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+===Working with source position in ge4detectorConstruction.cc===
+fSourcePosition: cornercorner_am241
+
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+density of ceramic on test: 1.680000 gm/cm^3
+ceramic Si5-O10-K21-O10-Am7-O14 6.000000 273.150000 632420964.994476
+ fMaterial:ceramic with formula: Si5-O10-K21-O10-Am7-O14 added! 
+     Nb of fMaterial = 1
+     Nb of fIsotope =  0
+     Nb of fElement =  1
+source         : am241
+buttonRadius   : 12.500000
+buttonThickness: 3.000000
+beadRadius     : 0.500000
+foilRadius     : 1.200000
+foilThickness  : 0.300000
+beadMaterial   : ceramic
+ButtonMaterial : Acrylic
+Checking overlaps for volume Bead (G4Sphere) ... OK! 
+Inside source:   am241
+Volume added...: Bead
+Returning logical Button..
+Adding material Acrylic to Ge4 list of materials.
+Adding material Aluminum to Ge4 list of materials.
+Adding material Resin to Ge4 list of materials.
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+str  : cornercorner_am241
+delim: _
+###################
+Source Position ......: cornercorner
+Before x = 0.000000
+SELECTED POSITION: cornercorner
+Inside else if Condition: cornercorner
+x = -46.458000
+After x = -46.458000
+Checking overlaps for volume Button (G4Tubs) ... OK! 
+*********************
+Volume added......: Button
+Source position from center of mother...: (-46.458000,-139.900000,-150.900000)
+Source position from center of world...: (-33.758000,-139.900000,-150.900000)
+Mass of detector = 2152.964669 g
+### gesimPhysicsList::ConstructProcess is done
+world cuts are set
+======================================================================
+======          Radioactive Decay Physics Parameters           =======
+======================================================================
+Max life time                                     1442695.04089 ps
+Internal e- conversion flag                       1
+Stored internal conversion coefficients           1
+Enable correlated gamma emission                  0
+Max 2J for sampling of angular correlations       10
+Atomic de-excitation enabled                      1
+Auger electron emission enabled                   1
+Auger cascade enabled                             1
+Check EM cuts disabled for atomic de-excitation   1
+Use Bearden atomic level energies                 0
+======================================================================
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes
+ Material : Air
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  990.000000 eV.    e-  990.000000 eV.    e+  990.000000 eV. proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : Lead
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  101.842918 keV    e-  1.367494 MeV    e+  1.278617 MeV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : Copper
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  24.750824 keV    e-  1.395343 MeV    e+  1.313453 MeV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes
+ Material : Vacuum
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  990.000000 eV.    e-  990.000000 eV.    e+  990.000000 eV. proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 4     used in the geometry : Yes
+ Material : Aluminum
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  6.903629 keV    e-  598.345073 keV    e+  570.850416 keV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 5     used in the geometry : Yes
+ Material : Polyethylene
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  2.247452 keV    e-  349.520693 keV    e+  337.971801 keV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 6     used in the geometry : Yes
+ Material : Germanium
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  20.643844 keV    e-  871.739848 keV    e+  831.682380 keV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 7     used in the geometry : Yes
+ Material : Acrylic
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  2.767983 keV    e-  389.196260 keV    e+  376.336404 keV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 8     used in the geometry : Yes
+ Material : myceramic
+ Range cuts        :  gamma  1.000000 mm.    e-  1.000000 mm.    e+  1.000000 mm. proton 1.000000 mm.
+ Energy thresholds :  gamma  4.835014 keV    e-  442.201162 keV    e+  427.589914 keV proton 100.000000 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+====================================================================
+
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+### Run 0 starts.
+Random Seed: 370861316, 85643
+Random Seed Index: 0
+Root file: am241_cornercorner_0.root
+ROOT Histo H10 Energy deposit (MeV) in the detector booked 
+ROOT Histo Nevts Number of primary events simulated booked 
+Creating Ntuple T1 in ROOT file: Hits
+ROOT Ntuple tT1 Hits Energy:TrueEnergy:GenEnergy:GenX:GenY:GenZ booked 
+gesimAnalysisManager: Histograms are booked and the run has been started
+### Run : 0
+--> Event 0 starts.
+--> Event 100000 starts.
+--> Event 200000 starts.
+--> Event 300000 starts.
+--> Event 400000 starts.
+--> Event 500000 starts.
+--> Event 600000 starts.
+--> Event 700000 starts.
+--> Event 800000 starts.
+--> Event 900000 starts.
+ Run terminated.
+Run Summary
+  Number of events processed : 1000000
+  User=86.930000s Real=87.681710s Sys=0.020000s
+ROOT: files writing...
+ROOT: files closing...
+gesimAnalysisManager: Histograms have been saved!
+Graphics systems deleted.
+Visualization Manager deleting...
+G4ANALYSIS_USE_ROOT
+G4 kernel has come to Quit state.
+================== Deleting memory pools ===================
+Number of memory pools allocated: 11; of which, static: 0
+Dynamic pools deleted: 11 / Total memory freed: 0.05 MB
+============================================================
+RunManagerKernel is deleted. Good bye :)
+DONE!
+Sun Nov 17 15:02:43 EST 2024

@@ -1,0 +1,5 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) ccs/lcc-users/tpbh222   2) ccs/lcc-user
+/opt/ohpc/admin/lmod/lmod/init/bash: line 70: deactivate: No such file or directory
